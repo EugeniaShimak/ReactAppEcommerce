@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './MainMenu.styles.scss'
-import {MenuItem} from "../MenuItem/MenuItem";
+import MenuItem from "../MenuItem/MenuItem";
 
 export default class MainMenu extends Component {
 
@@ -46,8 +46,8 @@ export default class MainMenu extends Component {
 
     render() {
         return <div className="main_menu">
-            {this.state.items.map(({id, title, imageUrl, linkUrl, size}) =>
-                <MenuItem key={id} title={title} imageUrl={imageUrl} size={size}/>
+            {this.state.items.map(({id, ...otherProps}) =>
+                <MenuItem key={id} {...otherProps}/>
             )}
         </div>
     }
