@@ -6,7 +6,7 @@ import {HomePage} from "./page/HomePage";
 
 function App() {
   return (
-    <div>
+    <div className="app">
       <HomePage/>
     </div>
   );
